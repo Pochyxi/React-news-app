@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+b-article:hover {
+  color: #61dafb!important;
+}
+.textoo:hover {
+  color: #61dafb!important;
+}
