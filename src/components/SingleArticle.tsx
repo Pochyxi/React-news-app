@@ -5,6 +5,17 @@ import { useNavigate, useParams } from "react-router-dom"
 import { Article } from "./MyMain"
 import { myTime } from "./RecipeReviewCard"
 import SimpleBackdrop from "./SimpleBackdrop"
+import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon'
+
+
+
+function HomeIcon(props: SvgIconProps) {
+    return (
+        <SvgIcon {...props}>
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </SvgIcon>
+    );
+}
 
 const SingleArticle = () => {
     const [article, setArticle] = useState<Article | null>(null)
@@ -41,7 +52,7 @@ const SingleArticle = () => {
                 <SimpleBackdrop toggle={toggle} />
                 <Button onClick={() => {
                     navigate('/')
-                }} variant="success">GO HOME</Button>
+                }} variant="dark"><HomeIcon /></Button>
             </Container>
             {
                 article && (
@@ -52,7 +63,7 @@ const SingleArticle = () => {
                         />
                         <CardMedia
                             component="img"
-                            height="194"
+                            height="auto"
                             image={article.imageUrl}
                             alt="Paella dish"
                         />
@@ -61,6 +72,9 @@ const SingleArticle = () => {
                                 {article.summary}
                             </Typography>
                         </CardContent>
+                        <Container>
+                            <a className="b-a" href={article.url} target='_blank' rel='noreferrer'>details</a>
+                        </Container>
                     </Card>
                 )
             }

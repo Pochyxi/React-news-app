@@ -42,3 +42,14 @@ b-article:hover {
 .textoo:hover {
   color: #61dafb!important;
 }
+.b-a {
+  text-decoration: none;
+  border: 2px solid black;
+  color: black;
+  padding: 15px;
+  border-radius: 20%;
+}
+.b-a:hover {
+  color: white!important;
+  background-color: black!important;
+}

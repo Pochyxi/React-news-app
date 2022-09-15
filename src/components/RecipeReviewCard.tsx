@@ -26,7 +26,7 @@ export default function RecipeReviewCard(props: myFunctionalComponentProps) {
     const navigate = useNavigate()
 
     return (
-        <Card sx={{ maxWidth: 345, marginTop: 16, overflow: 'auto' }}>
+        <Card sx={{ maxWidth: 345, marginBottom: 16, marginTop: 5, overflow: 'auto' }}>
             <CardHeader
                 className='textoo'
                 onClick={() => {
